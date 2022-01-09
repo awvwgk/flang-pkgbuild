@@ -1,0 +1,32 @@
+pkgbase = flang
+	pkgdesc = Fortran frontend for LLVM
+	pkgver = 13.0.0
+	pkgrel = 1
+	url = https://flang.llvm.org/
+	arch = x86_64
+	license = custom:Apache 2.0 with LLVM Exception
+	makedepends = clang-analyzer=13.0.0
+	makedepends = clang-tools-extra=13.0.0
+	makedepends = cmake>=3.4.3
+	makedepends = lld
+	makedepends = ninja
+	makedepends = pkg-config
+	makedepends = polly=13.0.0
+	makedepends = gawk
+	makedepends = compiler-rt
+	makedepends = libc++
+	depends = clang=13.0.0
+	depends = llvm=13.0.0
+	depends = mlir=13.0.0
+	options = !debug
+	options = strip
+	source = https://github.com/llvm/llvm-project/releases/download/llvmorg-13.0.0/flang-13.0.0.src.tar.xz
+	source = 0001-cast-cxx11-narrowing.patch
+	source = 0002-cmake-22162.patch
+	source = 0003-Link-against-libclang-cpp.so.patch
+	sha256sums = 13bc580342bec32b6158c8cddeb276bd428d9fc8fd23d13179c8aa97bbba37d5
+	sha256sums = f8babd240968599597cf2b906fad44b62e2d92ac7ea144530a3f9542e96e06b1
+	sha256sums = 77fb0612217b6af7a122f586a9d0d334cd48bb201509bf72e8f8e6244616e895
+	sha256sums = 8cb7fb58455b3d180538ca3522a6e3d6d9ec3ee66d7f339c2ccae82a7302bd2a
+
+pkgname = flang
